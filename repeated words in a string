@@ -1,0 +1,33 @@
+package starkeecode;
+
+import java.util.Scanner;
+
+/**
+ *
+ * @author GOWTHAM STARk
+ */
+public class StarkeeCode {
+
+    public static void main(String[] args) {
+    
+        String s;
+        Scanner sc = new Scanner(System.in);
+        int i=0,cnt=0;
+        s=sc.nextLine();
+        String[] str=s.split(" ");
+        for(i=0;i<str.length;i++)
+        {
+            cnt=0;
+            for(int j=i+1;j<str.length;j++)
+            {
+                if(str[i].equals(str[j]))
+                {cnt++;
+                str[j]=String.valueOf(j);
+                }
+            }
+                if(cnt>0)
+                System.out.println(str[i]+ " ");
+       
+    }
+    
+}
