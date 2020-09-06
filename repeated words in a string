@@ -12,20 +12,20 @@ public class StarkeeCode {
     
         String s;
         Scanner sc = new Scanner(System.in);
-        int i=0,cnt=0;
+        int i=0,count;
         s=sc.nextLine();
         String[] str=s.split(" ");
         for(i=0;i<str.length;i++)
         {
-            cnt=0;
-            for(int j=i+1;j<str.length;j++)
+            coount=0;
+            for(int j=i+1;j<str.length-1;j++)
             {
                 if(str[i].equals(str[j]))
-                {cnt++;
+                {count++;
                 str[j]=String.valueOf(j);
                 }
             }
-                if(cnt>0)
+                if(count>0)
                 System.out.println(str[i]+ " ");
        
     }
