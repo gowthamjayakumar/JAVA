@@ -1,0 +1,37 @@
+#include<stdio.h>
+int main()
+{
+//code by gowtham @starkeecode.blogspot.com
+	int a,b,temp,len=1,rem;
+	bool bol=false;
+	printf("Enter 'a' value: ");
+	scanf("%d",&a);
+	printf("Enter 'b' value: ");
+	scanf("%d",&b);
+	
+	if(b<a)
+	{
+		temp=b;
+		while(temp>0)
+		{
+			temp=temp/10;
+			len=len*10;
+		}
+		temp=a;
+		while(temp>0)
+		{
+			rem=temp%len;
+			temp=temp/10;
+			if(rem==b)
+			{ bol=true;
+			break;  }
+		}
+		if(bol)
+		printf("True");
+		else
+		printf("False");
+	}
+	else
+	printf("Invalid data");
+	return 0;
+}
